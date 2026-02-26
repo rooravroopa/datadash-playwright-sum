@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install playwright
-          playwright install chromium
+          python -m playwright install --with-deps chromium
 
       - name: Run Playwright scraper
         run: python sum_tables.py
