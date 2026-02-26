@@ -1,4 +1,4 @@
-name: DataDash QA 22f3000579@ds.study.iitm.ac.in
+name: DataDash QA
 
 on:
   workflow_dispatch:
@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install playwright
-          python -m playwright install --with-deps chromium
+          python -m playwright install chromium --with-deps
 
-      - name: Run Playwright scraper
+      - name: Run Playwright scraper 22f3000579@ds.study.iitm.ac.in
         run: python sum_tables.py
